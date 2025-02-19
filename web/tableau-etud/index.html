@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau des etudians</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <input type="text" name="nom" id="nom" placeholder="Nom">
+    <input type="number" name="note" id="note" placeholder="Note">
+    <button onclick="addEtudiant()">Ajouter</button>
+    <button onclick="DisplayEtudiant()">Afficher</button>
+    <button onclick="getEtudiantsSupereurA10()">Les valideurs</button>
+    <button onclick="getMoyenne()">Moyenne</button>
+    <button onclick="getMax()">Max</button>
+    <button onclick="getMin()">Min</button>
+    <input type="text" name="search" id="search">
+    <button onclick="search()">Rechercher</button>
+    <br>
+    <table id="table"></table>
+    <p id="moyenne"></p>
+    <p id="max"></p>
+    <p id="min"></p>
+</body>
+</html>
