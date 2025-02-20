@@ -1,2 +1,2 @@
-cpp/tp5/build/
-cpp/tp5-ex3/build/
+cpp/*/build/
+cpp/*/.*
