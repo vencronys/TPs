@@ -1,16 +1,13 @@
 #include "Point.h"
 
 int main() {
-    Point p1(3, 4);
-    p1.print();
-    p1.move(1, 1);
-    p1.print();
-    p1.setX(7);
-    p1.print();
-    p1.setY(2);
-    p1.print();
-    Point p2(1, 1);
-    p2.print();
+    Point p1;
+    p1.SetPoint("A", 1, 3);
+    p1.Print();
+
+    Point p2;
+    p2.SetPoint("B", 0, 7);
+    p2.Print();
     Point::PrintNumberOfOccurences();
     return 0;
 }
