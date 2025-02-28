@@ -4,7 +4,7 @@
 class Point {
 public:
     Point();
-    void SetPoint(std::string name, int x, int y);
+    Point(const std::string &name, const int &x, const int &y);
     inline void Print() const;
     static void PrintNumberOfOccurences() ;
 private:

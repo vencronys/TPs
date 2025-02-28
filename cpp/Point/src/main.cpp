@@ -2,12 +2,16 @@
 
 int main() {
     Point p1;
-    p1.SetPoint("A", 1, 3);
     p1.Print();
 
-    Point p2;
-    p2.SetPoint("B", 0, 7);
+    Point p2("B", 0, 7);
     p2.Print();
-    Point::PrintNumberOfOccurences();
+
+    Point *p3;
+    p3 = new Point;
+    p3->Print();
+
+    delete p3;
+
     return 0;
 }
