@@ -2,9 +2,11 @@
 
 int main() {
 
-    const Point constPoint;
+    const Point p1;
+    p1.Print();
 
-    constPoint.Print();
+    Point p2("p2", 1.0f, 2.0f);
+    p2.Print();
 
     return 0;
 }
