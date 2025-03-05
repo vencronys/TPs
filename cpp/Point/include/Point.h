@@ -1,16 +1,17 @@
 #include <iostream>
-#include <string>
 
 class Point {
 public:
     Point();
-    Point(const std::string &name, const int &x, const int &y);
+    Point(const char *name, const float &x, const float &y);
     inline void Print() const;
-    static void PrintNumberOfOccurences() ;
+    static void PrintNumberOfOccurences();
+    ~Point();
+
 private:
-    std::string m_name;
-    int m_x;
-    int m_y;
+    char *m_name;
+    float m_x;
+    float m_y;
     static int s_numberOfOccurences;
 };
 

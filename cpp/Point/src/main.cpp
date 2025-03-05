@@ -1,17 +1,10 @@
 #include "Point.h"
 
 int main() {
-    Point p1;
-    p1.Print();
 
-    Point p2("B", 0, 7);
-    p2.Print();
+    const Point constPoint;
 
-    Point *p3;
-    p3 = new Point;
-    p3->Print();
-
-    delete p3;
+    constPoint.Print();
 
     return 0;
 }
