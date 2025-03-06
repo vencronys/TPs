@@ -6,20 +6,20 @@ Personne::Personne() : Personne("null", "null", 0) {
 }
 
 Personne::Personne(const char *firstname, const char *lastname, const int &age) {
-    this->m_firstname = new char[strlen(firstname) + 1];
-    strcpy(this->m_firstname, firstname);
-    this->m_lastname = new char[strlen(lastname) + 1];
-    strcpy(this->m_lastname, lastname);
-    this->m_age = age;
+    m_firstname = new char[strlen(firstname) + 1];
+    strcpy(m_firstname, firstname);
+    m_lastname = new char[strlen(lastname) + 1];
+    strcpy(m_lastname, lastname);
+    m_age = age;
 }
 
 Personne::~Personne() {
-    delete[] this->m_firstname;
-    delete[] this->m_lastname;
+    delete[] m_firstname;
+    delete[] m_lastname;
 }
 
 void Personne::Display() const {
-    std::cout << "Firstname: " << this->m_firstname << std::endl;
-    std::cout << "Lastname: " << this->m_lastname << std::endl;
-    std::cout << "Age: " << this->m_age << std::endl;
+    std::cout << "Firstname: " << m_firstname << std::endl;
+    std::cout << "Lastname: " << m_lastname << std::endl;
+    std::cout << "Age: " << m_age << std::endl;
 }
