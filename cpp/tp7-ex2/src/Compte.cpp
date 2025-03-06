@@ -7,7 +7,7 @@ int Compte::s_nextID = 0;
 Compte::Compte() : Compte("null", 0.0) {}
 
 Compte::Compte(const char *name, const double &balance)
-        : m_ID(++s_nextID), m_balance(balance) {
+        : m_ID(++Compte::s_nextID), m_balance(balance) {
     m_name = new char[strlen(name) + 1];
     strcpy(m_name, name);
 }
