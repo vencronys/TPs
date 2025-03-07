@@ -2,6 +2,8 @@
 #include <cstring>
 #include <iostream>
 
+#define NEW_LINE '\n'
+
 int Compte::s_nextID = 0;
 
 Compte::Compte() : Compte("null", 0.0) {}
@@ -16,20 +18,20 @@ Compte::~Compte() { delete[] m_name; }
 
 void Compte::Print() const {
     std::cout << "ID: " << m_ID << ", Name: " << m_name
-        << ", Balance: " << m_balance << std::endl;
+        << ", Balance: " << m_balance << NEW_LINE;
 }
 
 void Compte::PrintBalance() const {
-    std::cout << "Balance: " << m_balance << std::endl;
+    std::cout << "Balance: " << m_balance << NEW_LINE;
 }
 
 void Compte::Withdraw(const double &balance) {
     if (balance > m_balance) {
-        std::cout << "Not enough balance" << std::endl;
+        std::cout << "Not enough balance" << NEW_LINE;
         return;
     }
     if (balance < 0) {
-        std::cout << "Invalid balance" << std::endl;
+        std::cout << "Invalid balance" << NEW_LINE;
         return;
     }
     m_balance -= balance;
@@ -37,7 +39,7 @@ void Compte::Withdraw(const double &balance) {
 
 void Compte::Deposit(const double &balance) {
     if (balance < 0) {
-        std::cout << "Invalid balance" << std::endl;
+        std::cout << "Invalid balance" << NEW_LINE;
         return;
     }
     m_balance += balance;
