@@ -5,7 +5,7 @@ public:
     Personne();
     Personne(const char *firstname, const char *lastname, const int &age);
     ~Personne();
-    void Display() const;
+    void Print() const;
 
 private:
     char *m_firstname;

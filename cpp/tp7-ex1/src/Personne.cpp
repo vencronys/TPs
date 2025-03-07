@@ -18,7 +18,7 @@ Personne::~Personne() {
     delete[] m_lastname;
 }
 
-void Personne::Display() const {
+void Personne::Print() const {
     std::cout << "Firstname: " << m_firstname << std::endl;
     std::cout << "Lastname: " << m_lastname << std::endl;
     std::cout << "Age: " << m_age << std::endl;
