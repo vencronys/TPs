@@ -2,8 +2,7 @@
 
 class Compte {
 public:
-    Compte();
-    Compte(const char *name, const double &balance);
+    Compte(const char *name = "null", const double &balance = 0.0);
     ~Compte();
     void Print() const;
     void PrintBalance() const;
