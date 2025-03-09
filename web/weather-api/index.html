@@ -1,275 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/0197b6ebf2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather API</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-        <script src="https://kit.fontawesome.com/0197b6ebf2.js" crossorigin="anonymous"></script>
-    </head>
+  <body>
+    <div class="header"></div>
 
-    <body>
-        <div class="header">
-            <h1> <span>21</span>° </h1>
-            <h2>Oujda</h2>
+    <div class="hourly-container"></div>
 
-            <i class="fa-solid fa-sun"></i>
-            <p><span>25</span>°/<span>14</span>° Feels like <span>21</span>°</p>
-            <p>Sat, 19:40</p>
+    <div class="daily-container"></div>
 
-        </div>
-
-        <div class="hourly-container">
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-            <ul>
-                <li>20:20</li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <p><span>21</span>°</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-            </ul>
-        </div>
-
-        <div class="daily-container">
-            <ul>
-                <li>Today</li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <span>21</span>°
-                </li>
-                <li>
-                    <span>14</span>°
-                </li>
-            </ul>
-            <ul>
-                <li>Wednesday</li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <span>21</span>°
-                </li>
-                <li>
-                    <span>14</span>°
-                </li>
-            </ul>
-            <ul>
-                <li>Today</li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <span>21</span>°
-                </li>
-                <li>
-                    <span>14</span>°
-                </li>
-            </ul>
-            <ul>
-                <li>Today</li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <span>21</span>°
-                </li>
-                <li>
-                    <span>14</span>°
-                </li>
-            </ul>
-            <ul>
-                <li>Today</li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <span>21</span>°
-                </li>
-                <li>
-                    <span>14</span>°
-                </li>
-            </ul>
-            <ul>
-                <li>Today</li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <span>21</span>°
-                </li>
-                <li>
-                    <span>14</span>°
-                </li>
-            </ul>
-            <ul>
-                <li>Today</li>
-                <li>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>0</span>%
-                </li>
-                <li>
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-                <li>
-                    <span>21</span>°
-                </li>
-                <li>
-                    <span>14</span>°
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer">
-            <div>
-                <p>Sunrise</p>
-                <p>07:38</p>
-                <i class="fa-solid fa-sun"></i>
-                <i class="fa-solid fa-arrow-down"></i>
-            </div>
-            <div>
-                <p>Sunset</p>
-                <p>18:04</p>
-                <i class="fa-solid fa-sun"></i>
-                <i class="fa-solid fa-arrow-up"></i>
-            </div>
-        </div>
-    </body>
-
+    <div class="footer">
+      <div>
+        <p>Sunrise</p>
+        <p id="sunrise">07:38</p>
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+      <div>
+        <p>Sunset</p>
+        <p id="sunset">18:04</p>
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
+  </body>
 </html>

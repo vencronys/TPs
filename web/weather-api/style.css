@@ -1,33 +1,34 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    background-color: #f4f4f4;
-    color: #fff;
+  background-color: #f4f4f4;
+  color: #fff;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(180deg, #BBE0F8 0%, #A6CEF9 100%);
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    height: 100vh;
-    width: 437px;
-    margin: auto;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(180deg, #bbe0f8 0%, #a6cef9 100%);
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+  height: 100vh;
+  width: 500px;
+  margin: auto;
 }
 
 /* Icon styles */
-.fa-sun{
-    color: #B9A32D;
+.fa-sun {
+  color: #b9a32d;
 }
 
-
-.fa-droplet{
-    color: #fff;
+.fa-droplet {
+  color: #fff;
 }
 
 /* Containers styles */
@@ -35,95 +36,105 @@ body {
 .hourly-container,
 .daily-container,
 .footer {
-    background-color: #CDE5FA;
-    border-radius: 24px;
-    padding: 20px;
-    display: flex;
+  background-color: #cde5fa;
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  flex-shrink: 0;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px 40px 0;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 40px 0;
+  position: relative;
 }
 
 .header i {
-    position: absolute;
-    right: 50px;
-    top: 30px;
-    font-size: 4rem;
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  font-size: 4rem;
 }
 
-.header h1{
-    font-size: 4.5rem;
-    font-weight: 500;
+.header h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
 }
 
 .header h2 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin-bottom: 36px;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 36px;
 }
 
 .hourly-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
 }
 .hourly-container ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 70px;
+  flex-shrink: 0;
+  color: #fff;
 }
 
 .daily-container {
-    flex-direction: column;
-    gap: 20px;
-
+  flex-direction: column;
+  gap: 20px;
 }
 
 .daily-container ul {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.daily-container ul li {
     flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-basis: 0;
+    text-align: end;
 }
 
 .daily-container ul li:first-child {
-    width: 70px;
+  /* width: 70px; */
+  min-width: 99px;
+  text-align: start;
 }
 
 .footer {
-    justify-content: space-evenly;
-    align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .footer div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
 }
 
 .footer i.fa-sun {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 .footer i.fa-arrow-down,
 .footer i.fa-arrow-up {
-    font-size: 3rem;
-    position: absolute;
-    bottom: -17px;
+  font-size: 3rem;
+  position: absolute;
+  bottom: -17px;
 }
