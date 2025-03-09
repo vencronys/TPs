@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather API</title>
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <script
@@ -33,5 +34,15 @@
         <i class="fa-solid fa-arrow-up"></i>
       </div>
     </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(() => console.log("Service Worker Registered"))
+          .catch((error) =>
+            console.log("Service Worker Registration Failed", error)
+          );
+      }
+    </script>
   </body>
 </html>
