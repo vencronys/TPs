@@ -185,3 +185,23 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchWeatherData(DEFAULT_LAT, DEFAULT_LON);
   }
 });
+
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredPrompt = event;
+  document.getElementById("install-btn").style.display = "block";
+
+  document.getElementById("install-btn").addEventListener("click", () => {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted PWA install");
+      } else {
+        console.log("User dismissed PWA install");
+      }
+      deferredPrompt = null;
+    });
+  });
+});

@@ -138,3 +138,30 @@ ul {
   position: absolute;
   bottom: -17px;
 }
+
+
+#install-btn {
+    padding: 12px 24px;
+    background-color: #333; /* Dark background */
+    color: white; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#install-btn:hover {
+    background-color: #444; /* Slightly lighter on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+#install-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.6); /* Focus effect */
+}
+
+#install-btn:active {
+    background-color: #555; /* Darker background when clicked */
+}

@@ -34,14 +34,17 @@
         <i class="fa-solid fa-arrow-up"></i>
       </div>
     </div>
+    <button id="install-btn">Install App</button>
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
-          .register("/service-worker.js")
-          .then(() => console.log("Service Worker Registered"))
-          .catch((error) =>
-            console.log("Service Worker Registration Failed", error)
-          );
+          .register("/service-worker.js") // Ensure the path is correct
+          .then((registration) => {
+            console.log("Service Worker Registered", registration);
+          })
+          .catch((error) => {
+            console.log("Service Worker Registration Failed", error);
+          });
       }
     </script>
   </body>

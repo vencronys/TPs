@@ -3,11 +3,13 @@
 class Compte {
 public:
     Compte(const char *name = "null", const double &balance = 0.0);
+    Compte(const Compte &);
     ~Compte();
     void Print() const;
     void PrintBalance() const;
     void Withdraw(const double &balance);
     void Deposit(const double &balance);
+    int GetID() const;
 
 private:
     static int s_nextID;
