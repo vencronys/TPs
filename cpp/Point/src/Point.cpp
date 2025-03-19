@@ -2,33 +2,45 @@
 #include <cstring>
 #include <iostream>
 
-int Point::Point::s_count = 0;
+int Point::Point::count = 0;
 
 Point::Point() {
-    m_name = new char[20];
-    std::strcpy(m_name, "null");
-    m_x = 0.0f;
-    m_y = 0.0f;
-    Point::s_count++;
+    name = new char[20];
+    std::strcpy(name, "null");
+    x = 0.0f;
+    y = 0.0f;
+    Point::count++;
 }
 
-Point::Point(const char *name, const float &x, const float &y) {
-    m_name = new char[std::strlen(name) + 1];
-    std::strcpy(m_name, name);
-    m_x = x;
-    m_y = y;
-    Point::s_count++;
+Point::Point(const char *name_, const float &x_, const float &y_) {
+    name = new char[std::strlen(name_) + 1];
+    std::strcpy(name, name_);
+    x = x_;
+    y = y_;
+    Point::count++;
+}
+
+Point::Point(const Point &p) {
+    x = p.x;
+    y = p.y;
+    name = new char[std::strlen(p.name) + 1];
+    std::strcpy(name, p.name);
+    std::cout << "Constructeur de recopie" << std::endl;
 }
 
 Point::~Point() {
-    delete[] m_name;
-    Point::s_count--;
+    delete[] name;
+    Point::count--;
 }
 
-void Point::Print() const {
-    std::cout << m_name << "(" << m_x << ", " << m_y << ")" << std::endl;
+void Point::print() const {
+    std::cout << name << "(" << x << ", " << y << ")" << std::endl;
 }
 
-void Point::PrintCount() {
-    std::cout << "Count: " << Point::s_count << std::endl;
+void Point::printCount() {
+    std::cout << "Count: " << Point::count << std::endl;
+}
+
+bool Point::compare(Point p) const {
+    return (x == p.x && y == p.y && !std::strcmp(name, p.name));
 }

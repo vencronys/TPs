@@ -1,2 +1,4 @@
 cpp/*/build/
 cpp/*/.*
+cpp/*/bin/
+cpp/*/compile_commands.json

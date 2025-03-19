@@ -2,14 +2,16 @@
 class Point {
 public:
     Point();
-    Point(const char *name, const float &x, const float &y);
+    Point(const char *, const float &, const float &);
+    Point(const Point &);
     ~Point();
-    void Print() const;
-    static void PrintCount();
+    void print() const;
+    static void printCount();
+    bool compare(Point) const;
 
 private:
-    char *m_name;
-    float m_x;
-    float m_y;
-    static int s_count;
+    char *name;
+    float x;
+    float y;
+    static int count;
 };
