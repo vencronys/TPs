@@ -8,6 +8,7 @@ public:
     void print() const;
     static void printCount();
     bool compare(Point) const;
+    Point &operator=(const Point &);
 
 private:
     char *name;
