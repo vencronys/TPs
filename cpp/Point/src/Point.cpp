@@ -2,6 +2,7 @@
 #include <cstddef>
 #include <cstring>
 #include <iostream>
+#include <istream>
 
 #define NEW_LINE '\n';
 
@@ -86,4 +87,17 @@ Point &operator*(const float & number, const Point &p) {
     rp.x *= number;
     rp.y *= number;
     return rp;
+}
+std::istream &operator>>(std::istream & istr, Point &p) {
+    std::cout << "Insert name: ";
+    istr >> p.name;
+    std::cout << "Insert x: ";
+    istr >> p.x;
+    std::cout << "Insert y: ";
+    istr >> p.y;
+    return istr;
+}
+std::ostream &operator<<(std::ostream & ostr, Point &p) {
+    ostr << p.name << "(" << p.x << ", " << p.y << ")" << NEW_LINE;
+return ostr;
 }

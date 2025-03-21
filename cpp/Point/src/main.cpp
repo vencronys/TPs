@@ -16,5 +16,7 @@ int main() {
     p1.print();
     p1 = 2 * p1;
     p1.print();
+    std::cin >> p1;
+    std::cout << p1;
     return 0;
 }

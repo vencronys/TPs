@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 class Point {
 public:
     Point();
@@ -12,6 +13,8 @@ public:
     Point &operator+(const Point &);
     Point &operator*(const float &);
     friend Point &operator*(const float &, const Point &);
+    friend std::istream &operator>>(std::istream &, Point &);
+    friend std::ostream &operator<<(std::ostream &, Point &);
 
 private:
     char *name;
