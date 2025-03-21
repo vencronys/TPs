@@ -9,6 +9,9 @@ public:
     static void printCount();
     bool compare(Point) const;
     Point &operator=(const Point &);
+    Point &operator+(const Point &);
+    Point &operator*(const float &);
+    friend Point &operator*(const float &, const Point &);
 
 private:
     char *name;

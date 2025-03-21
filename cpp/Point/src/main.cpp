@@ -1,18 +1,20 @@
-#include "iostream"
-
+#include <iostream>
 #include "Point.h"
 
-int main() {
+#define NEW_LINE '\n';
 
+int main() {
     Point p1, p3 = p1;
     p1.print();
-
     Point p2("p2", 1.0f, 2.0f);
     p2.print();
-
-    std::cout << (p1.compare(p3) ? "egaux" : "pas egaux") << std::endl;
-
+    std::cout << (p1.compare(p3) ? "egaux" : "pas egaux") << NEW_LINE;
     p3 = p1;
-
+    p1 = p2 + p3;
+    p1.print();
+    p1 = p1 * 5;
+    p1.print();
+    p1 = 2 * p1;
+    p1.print();
     return 0;
 }

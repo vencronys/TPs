@@ -1,8 +1,11 @@
 #include "Point.h"
+#include <cstddef>
 #include <cstring>
 #include <iostream>
 
-int Point::Point::count = 0;
+#define NEW_LINE '\n';
+
+int Point::count = 0;
 
 Point::Point() {
     name = new char[5];
@@ -28,7 +31,7 @@ Point::Point(const Point &p) {
     name = new char[std::strlen(p.name) + 1];
     std::strncpy(name, p.name, std::strlen(p.name) + 1);
     name[std::strlen(p.name)] = '\0';
-    std::cout << "Constructeur de recopie" << std::endl;
+    std::cout << "Constructeur de recopie" << NEW_LINE;
 }
 
 Point::~Point() {
@@ -37,11 +40,11 @@ Point::~Point() {
 }
 
 void Point::print() const {
-    std::cout << name << "(" << x << ", " << y << ")" << std::endl;
+    std::cout << name << "(" << x << ", " << y << ")" << NEW_LINE;
 }
 
 void Point::printCount() {
-    std::cout << "Count: " << Point::count << std::endl;
+    std::cout << "Count: " << Point::count << NEW_LINE;
 }
 
 bool Point::compare(Point p) const {
@@ -56,4 +59,31 @@ Point &Point::operator=(const Point &p) {
     std::strncpy(name, p.name, std::strlen(p.name) + 1);
     name[std::strlen(p.name)] = '\0';
     return *this;
+}
+
+Point &Point::operator+(const Point &p) {
+    size_t imp_length = std::strlen(name), p_length = std::strlen(p.name);
+    static Point rp(*this);
+    rp.x += p.x;
+    rp.y += p.y;
+    delete[] rp.name;
+    rp.name = new char[imp_length + p_length + 1];
+    std::strncpy(rp.name, name, imp_length);
+    std::strncpy(rp.name + imp_length, p.name, p_length);
+    name[imp_length + p_length + 1] = '\0';
+    return rp;
+}
+
+Point &Point::operator*(const float & number) {
+    static Point rp(*this);
+    rp.x *= number;
+    rp.y *= number;
+    return rp;
+}
+
+Point &operator*(const float & number, const Point &p) {
+    static Point rp(p);
+    rp.x *= number;
+    rp.y *= number;
+    return rp;
 }
