@@ -24,7 +24,7 @@ String &String::operator=(const String &str) {
     delete[] buffer;
     int size = std::strlen(str.buffer);
     buffer = new char[size + 1];
-    std::strncpy(buffer, str.buffer, size + 1);
+    std::strncpy(buffer, str.buffer, size);
     buffer[size + 1] = '\0';
     return *this;
 }
