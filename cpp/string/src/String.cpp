@@ -155,8 +155,17 @@ std::ostream &operator<<(std::ostream &os, const String &str) {
     return os;
 }
 
-// FIX IT
 std::istream &operator>>(std::istream &is, String &str) {
-    is >> str.buffer;
+    char temp[1024];
+    is >> temp;
+    delete[] str.buffer;
+    int size = 1, i = 0;
+    while (*(temp + i++) && size++) {}
+    str.buffer = new char[size + 1];
+    i = -1;
+    while (*(temp + ++i)) {
+        *(str.buffer + i) = *(temp + i);
+    }
+    *(str.buffer + size) = '\0';
     return is;
 }
