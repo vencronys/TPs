@@ -5,7 +5,7 @@ if (
     || !isset($_POST['date_naissance'])
     || !isset($_POST['moyenne'])
     || !isset($_POST['niveau'])
-    // || !isset($_POST['langues[]'])
+    || !isset($_POST['langues'])
     || !isset($_POST['sexe'])
     || !isset($_POST['adresse'])
 ) {
@@ -49,8 +49,8 @@ if (!preg_match("/bac[235]?/", $niveau)) {
     exit;
 }
 
-for ( $i = 0; $i < count($langues); $i++ ) {
-    if (!preg_match("/[(AR)(FR)(EN)]/", $langues[$i])) {
+foreach ($langues as $langue) {
+    if (!in_array($langue, ['AR', 'FR', 'EN'])) {
         echo "Erreur : La langue doit être soit AR, FR ou EN.";
         exit;
     }
@@ -61,11 +61,17 @@ if (!($sexe == "homme" || $sexe == "femme")) {
     exit;
 }
 
-echo "Vous etes $nom $prenom et vous avez $age ans. <br />";
+echo "Vous êtes $nom $prenom et vous avez $age ans. <br />";
 echo "Votre moyenne est: $moyenne <br />";
 echo "Votre niveau est: $niveau <br />";
-echo "Vous parlez les langues suivantes: <br />";
-echo "Vous etes $sexe <br />";
+echo "Vous parlez les langues suivantes:";
+echo "<ul>";
+foreach ($langues as $langue) {
+    echo " <li> $langue </li>";
+}
+echo "</ul>";
+echo "Votre sexe: $sexe <br />";
+echo "Vous habitez à $adresse <br />";
 
 function validateDate($date) { 
 	list($year, $month, $day) = explode('-', $date); 
