@@ -1,5 +1,6 @@
 #include "String.h"
 #include <cstring>
+#include <string.h>
 #include <iostream>
 
 String::String(const char *other_buffer) {

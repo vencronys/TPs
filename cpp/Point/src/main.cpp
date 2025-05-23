@@ -18,6 +18,6 @@ int main() {
     // p1.print();
     // std::cin >> p1;
     // std::cout << p1;
-    Point3d p1, p3 = p1;
+    // Point3d p1, p3 = p1;
     return 0;
 }

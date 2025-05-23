@@ -1,0 +1,5 @@
+# ninja log v6
+21	642	7668063210999842	CMakeFiles/TextBuffer.dir/main.cpp.obj	250a2b4dba073384
+29	717	7668062159579980	CMakeFiles/TextBuffer.dir/TextFloatBuffer.cpp.obj	360af35a27984eb8
+19	725	7668062159429652	CMakeFiles/TextBuffer.dir/TextBuffer.cpp.obj	4cdf30de1a290f48
+642	784	7668063217212133	TextBuffer.exe	741c417e4ddf3a8e

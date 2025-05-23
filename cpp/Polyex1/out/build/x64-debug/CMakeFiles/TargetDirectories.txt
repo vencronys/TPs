@@ -1,0 +1,3 @@
+C:/dev/TPs/cpp/Polyex1/out/build/x64-debug/CMakeFiles/Polyex1.dir
+C:/dev/TPs/cpp/Polyex1/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/dev/TPs/cpp/Polyex1/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
